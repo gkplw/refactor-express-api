@@ -15,7 +15,7 @@ function CreateProductForm() {
     await axios.post("http://localhost:4001/products", {
       name,
       image: imageUrl,
-      price,
+      price: Number(price),
       description,
       category,
     });

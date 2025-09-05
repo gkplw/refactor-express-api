@@ -27,7 +27,7 @@ function EditProductForm() {
     await axios.put(`http://localhost:4001/products/${params.productId}`, {
       name,
       image: imageUrl,
-      price,
+      price: Number(price),
       description,
       category,
     });
